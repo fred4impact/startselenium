@@ -1,0 +1,150 @@
+
+
+UAT
+1 Exploratory testing
+2 check GUI typos image slaigment sbuttmes
+3 smoke test chekc links if not going any where is a bug
+4 functionalities what can the appliacation
+
+know what the application need to do noe 1
+user jauney is your testcasae
+
+
+
+
+
+
+#Section  One:  Installation and setup selenium, java Maven.
+
+1. Downlaod all Java relevant Jars and install
+2. Create Maven project on InteJ AND USING ARCHITYPE
+
+3. Add Selenium, chrome and Webdriver Manager other jars
+4. instantiate Driver class  object and set property
+5. run your first selenium to make sure it well install
+
+STEPS: to Create A NEW MAVEN PROJECT
+
+1. Click on file > New > Project
+2. Select Maven Architype
+3. Enter Your Project Name & Location
+4. Select Maven-architype-quickstart
+5. Enter Group ID
+6. Enter Project ID
+7. Next
+
+***************
+GitHub Steps
+*****************
+1. Create a github account
+2. create a repository on github
+3. cd to your project folder if you ae using ternimal
+4 or Open your project e.g on InteliJ and right click to open in terminal
+5. enter git init
+6. git status
+7. git add .
+8. git commit -m "your commit message"
+9. git remote add repo_url that you just created
+10. git push
+11. refresh your repos and you will see your folders already pushed
+
+***********************************
+
+*************************************
+#SECTION 2: WORKING WITH SELENIUM
+******************************************
+##1.How to use WebDriver and Its Methods
+  Browser
+  Navigation
+  FindElements
+  WebElement
+  Check Box & Radio buttons
+  Drop Down
+  Selects
+  Multiple Selects
+  WebTable Handling
+  Javascript Object
+  alert
+
+
+**************************************
+#SECTION 3: Intro To Java for Testers
+***************************************
+1. what is class and how to create java class
+2. data types & variables
+3. classes and objets
+4. conditional statements
+5. what is Object and how to create objects class in java
+*******************************************
+
+
+
+
+
+
+Browser Operations
+/ Navigate to a page
+driver.navigate().to("http://google.com");
+// Get the title of the page
+String title = driver.getTitle();
+// Get the current URL
+String url = driver.getCurrentUrl();
+// Get the current page HTML source
+String html = driver.getPageSource();
+
+driver.manage().window().setSize(new Dimension(375,667));
+
+*************
+setUp Browser
+by system.setpropert or by webdriver manger
+
+
+
+## Prerequisites
+
+- **`IDE:** [IntelliJ IDEA](https://www.jetbrains.com/idea/)**Programming**`
+- **`language:**Java`
+- **`Browser and OS:`**
+- `Chrome on Mac**Automation Tool:** WebDriver + [chromedriver](https://chromedriver.chromium.org/downloads)`
+- Maven
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.selenium.dev/documentation/webdriver/getting_started/upgrade_to_selenium_4/
+         // using WebDriverManager
+         WebDriverManager.chromedriver().driverVersion("111.0.5563.64").setup();
+        driver = new ChromeDriver(options);
+
+        without version
+
+         // using WebDriverManager
+                 WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver(options);
+
+
+List<WebElements> listvariable = driver.findelements(By.tagName("a");
+ for(WebElement element: listvaraible){
+   System.out.println(listvariable.getText())
+}
+
+
+DEMO SITE URL
+
+https://the-internet.herokuapp.com/
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+https://devhints.io/xpath#class-check
+https://www.bstackdemo.com/
+https://www.selenium.dev/documentation/webdriver/getting_started/upgrade_to_selenium_4/
+http://formy-project.herokuapp.com/form
+https://www.saucedemo.com/

@@ -1,0 +1,12 @@
+1. Get the web Elements on the following apge using the URL: "http://formy-project.herokuapp.com/form" by available locator. eg. byLinkText
+2. Name them according to what they represent on the page
+3. Create a selenium script by using driver.findelement(By.linkText("lOGIN"));
+4. Assign those to WebElements objects E.G
+ " WebElement firstName = driver.findElement(By.id("first-name"));"
+ for each elements controls
+
+ #Task1: to see what capabalities they have by using the variable name e.g firstname and the power of  dot
+ e.g firstname.clear() and list all you can see that eleemnts us capable
+
+ #Task2: fill the form and submit using selenium
+ Thank you.
