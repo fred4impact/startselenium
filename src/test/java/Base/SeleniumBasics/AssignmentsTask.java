@@ -1,4 +1,4 @@
-package SeleniumBasics;
+package Base.SeleniumBasics;
 
 import org.testng.annotations.Test;
 

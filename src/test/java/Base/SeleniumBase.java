@@ -1,12 +1,15 @@
 package Base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 
 import java.time.Duration;
@@ -42,22 +45,26 @@ public class SeleniumBase {
         WebDriverManager.chromedriver().driverVersion("111.0.5563.64").setup();
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
-        driver.get("http://formy-project.herokuapp.com/form");
-       driver.manage().window().maximize();
-
+        driver.manage().window().maximize();
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
 
+       // Form url :   http://formy-project.herokuapp.com/form
 
+
+      driver.findElement(By.tagName("a"));
 
 
     }
 
 
+    @AfterTest
+    public  void closeApp(){
+        driver.close();
+    }
 
     @AfterClass
     public void tearDown(){
-        driver.close();
         driver.quit();
     }
 

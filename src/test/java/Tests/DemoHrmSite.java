@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 
+
 public class DemoHrmSite extends SeleniumBase {
 
     @Test
@@ -29,20 +30,22 @@ public class DemoHrmSite extends SeleniumBase {
         // enter valid password
         WebElement password = driver.findElement(By.name("password"));
         password.clear();
-        //password.sendKeys("admin123", Keys.ENTER);
+        password.sendKeys("admin123", Keys.ENTER);
 
         // click n login button
         WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
 
-        // Wait for visibility of an element explicit waite
-        /*
-        WebDriverWait ewaite  = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement elelment = ewaite.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("#locator")));
-       */
 
-//// How to check if an element is visible
-//        Assert.assertTrue(driver.findElement(By.xpath("//h6[text()='Dashboard']")).isDisplayed());
-//        System.out.println("Dashboard URL is" + driver.getCurrentUrl());
+        // logout
+        WebElement profileDropDown = driver.findElement(By.className(".oxd-userdropdown-tab"));
+        driver.findElement(By.xpath("a[href$='/web/index.php/auth/logout']")).click();
+
+
+
+//        WebElement  DashMenu =  driver.findElement(By.xpath("//div[@class=\"oxd-sidepanel-body\"]"));
+//        System.out.println("Is Dash Menu visisble ? :" +  DashMenu.isDisplayed());
+
+
     }
 
 
@@ -79,3 +82,11 @@ driver.findElement(By.xpath("//div[contains(text(),'COMPOSE')]")).click();
 *
 *
  */
+
+
+
+// Wait for visibility of an element explicit waite
+        /*
+        WebDriverWait ewaite  = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement elelment = ewaite.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("#locator")));
+       */

@@ -78,10 +78,6 @@ GitHub Steps
 *******************************************
 
 
-
-
-
-
 Browser Operations
 / Navigate to a page
 driver.navigate().to("http://google.com");
