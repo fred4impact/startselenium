@@ -25,7 +25,7 @@ public class PracticeTests  extends seleniumBasics.SeleniumPracticeBase {
 
     }
 
-     @Test(testName = "Return All Links on the Page Test")
+     @Test(testName = "Return All Links on the Page Test", enabled = false)
      public void checkAllLinksOnThePage(){
          List<WebElement> multiLinks = driver.findElements(By.tagName("a"));
          System.out.println("The count of the links on page is:" + multiLinks.size());

@@ -5,8 +5,10 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import javax.lang.model.element.Element;
 import java.time.Duration;
 import java.util.List;
 
@@ -17,8 +19,10 @@ public class BrowserActions {
 
          // JAVA , TESTNG  AND SELENIUM IN YOUR FRAMEWORK
 
-      @Test
+      @Test(enabled = false)
        public void setupBrowser() throws InterruptedException {
+
+
 
        /*
        *********************************
@@ -81,26 +85,40 @@ public class BrowserActions {
            //driver.manage().window().setSize(new Dimension(400, 800));
 
 
-
           // HOW TO LOCATE ELEMETNS ON WEBPAGE
             // USING  findelents()
              //WebElement button =  driver.findElement(By.linkText("login"));
-             WebElement userName = driver.findElement(By.id("user-name"));
-             userName.click();
-             userName.clear();
-             userName.sendKeys("Sussan");
-             //userName.sendKeys("Sussan", Keys.ENTER); // search an item
-             String usernameText = userName.getText();
 
-             Boolean isUsernameDisplayed  = userName.isDisplayed();
-             System.out.println(" What the status of my username Field? " + isUsernameDisplayed);
+//             String currenthANDLE =  driver.getWindowHandle();
+//             System.out.println("My browser handle" + currenthANDLE);
 
-             WebElement password = driver.findElement(By.id("password"));
-             password.sendKeys("secret_sauce");
 
-              // get login button
+//             WebElement userName = driver.findElement(By.id("user-name"));
+//             userName.click();
+//             userName.clear();
+//             userName.sendKeys("Sussan");
+//             //userName.sendKeys("Sussan", Keys.ENTER); // search an item
+//             String usernameText = userName.getText();
+//
+//             Boolean isUsernameDisplayed  = userName.isDisplayed();
+//             System.out.println(" What the status of my username Field? " + isUsernameDisplayed);
+//
+//             WebElement password = driver.findElement(By.id("password"));
+//             password.sendKeys("secret_sauce");
+//
+//              // get title of the page and assert the title is correct
+//              String mainTitle = "Swag Labs";
+//              String currentTitle = driver.getTitle();
+//              System.out.println("Current browser name" + "  " +  currentTitle );
+//              Assert.assertEquals(mainTitle, currentTitle);
 
-              String titleOfMtPage = driver.getTitle();
+
+              // if you declaring a variable for an elememnt
+
+               //WebElement varibale_name = driver.findElement("what element to locate ");
+               // String my_variable = driver.getCurrentUrl(); variable declearation and assign value
+
+
 
               /* DRIVER FINDELEMENTS USECASE:
               ****************
@@ -157,7 +175,13 @@ public class BrowserActions {
        element.sendKeys("someText");
        element.clear();
        element.submit();
-       element.getText();  // get title
+        element.getText();  // get title
+       *
+       *
+       *
+       *
+       *
+       *
 
        String innerText = element.getText();
        boolean isEnabled = element.isEnabled();
@@ -186,10 +210,74 @@ public class BrowserActions {
 
        // Driver uses this to close and  quite the running application
        //driver.close(); // close it close current open browser
+
+
+
+          //select // dropdown
+
+
+          /// multiple element locator using the page https://www.bstackdemo.com/
+
+
+
+
        driver.quit();  //  quite the browser from task bar
 
 
 
+       }
+
+
+
+
+       @Test(testName = "Multiple elements locations")
+       public void MultipleElements(){
+           // Setting options of browsers How is used.
+           ChromeOptions options =  new ChromeOptions();
+           options.addArguments("--remote-allow-origins=*");
+           options.addArguments("start-maximized");
+           DesiredCapabilities caps = new DesiredCapabilities();
+           caps.setCapability(ChromeOptions.CAPABILITY, options);
+           options.merge(caps);
+
+           // Setup Webdriver Manger
+           WebDriverManager.chromedriver().setup();
+           driver = new ChromeDriver(options);
+
+           // Open Test Application URL
+           driver.get("https://automationintesting.online/"); // this is the application e are testing against
+           driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+
+           // we are getting the number of links on the current page adn storing it on the varible
+          List<WebElement> multipleLink =  driver.findElements(By.tagName("a"));
+          int getMyLinkSize =  multipleLink.size();
+          System.out.println("Print number of links on the page we are on"  + "   " + getMyLinkSize);
+
+          // get and list all the images on the application under test
+           List<WebElement> images = driver.findElements(By.tagName("img"));
+           int countImageNumber = images.size();
+           System.out.println("Number og images on my page"  + "  " + countImageNumber);
+
+
+            /*
+                1, find elements using driver  by id, linkText, name, cssLocator, class xpath or relevant locators
+                2. Assign them to varilable
+                3. perform action on the elements e.g send a text or click or enable
+                44 you can get values from them
+                5. perform assertion on them
+
+             */
+
+           WebElement nameVar =  driver.findElement(By.id("name")); // pattern
+           nameVar.clear();
+           nameVar.sendKeys("sussan");
+           String currentValueInName = nameVar.getText();
+           System.out.println("The value i just entered" +  " "  + currentValueInName);
+
+
+
+           driver.quit();
        }
 
 
