@@ -142,5 +142,13 @@ https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 https://devhints.io/xpath#class-check
 https://www.bstackdemo.com/
 https://www.selenium.dev/documentation/webdriver/getting_started/upgrade_to_selenium_4/
-http://formy-project.herokuapp.com/form
+
 https://www.saucedemo.com/
+http://formy-project.herokuapp.com/form
+https://automationintesting.online/
+
+
+ //Select Options
+        WebElement seleYearOfExperirence = driver.findElement(By.id("select-menu"));
+        Select select1 = new Select(seleYearOfExperirence);
+        select1.selectByIndex(1);

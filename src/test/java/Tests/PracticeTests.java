@@ -39,6 +39,7 @@ public class PracticeTests  extends seleniumBasics.SeleniumPracticeBase {
      }
 
     private void validateLinkURL(String linkUrl) {
+
     }
 
 

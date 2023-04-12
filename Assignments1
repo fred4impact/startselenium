@@ -20,3 +20,25 @@ lOGIN PAGE
 username = id"user-name"
 password = id"password"
 loginButton = name"login-button"
+
+JAVA CLASS:
+
+********************
+TO CREATE A NEW CLASS
+1 create a package inside the src / main / java
+2 create the desired class name
+3.create the attributes of the class
+4.create the methods or functions of the class
+
+#Assignment 2
+**OBJECTS OREINTED PROGREAMMING**
+
+1. **Banking software:** In a banking software application, objects are used to represent **customers**, **accounts**, **transactions**, and other financial entities. For example, a customer object would contain information such as **name, address, and account details**, while an account object would contain information such as account number, balance, and transaction history.
+ write the class object list attributes and method tha they can perform
+
+
+
+
+Assignment3: selenium
+fill all the form  http://formy-project.herokuapp.com/form and submit
+
