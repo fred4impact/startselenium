@@ -39,6 +39,14 @@ TO CREATE A NEW CLASS
 
 
 
-Assignment3: selenium
-fill all the form  http://formy-project.herokuapp.com/form and submit
+Assignment 3: selenium
+fill  the form  http://formy-project.herokuapp.com/form and submit
 
+Assignment 4: CREATEE CLASS OBJECTS
+CREATE class objects, the attributes and methods  E.G
+E-commerce website: In an e-commerce website, objects are used to
+represent products, orders, customers, and other entities. For example, a product object would contain information such as name, description, price, and image, while an order object would contain information such as order number, date, and customer details.
+
+PRODUCT
+name description, price
+sell,
