@@ -1,45 +1,29 @@
 package bank;
-// create
 
 public class Bank {
 
-    // qualities that discribe the object
-   // name what datatype should name be ?
-    String name; // attributes
-    String address;
-    String owner;
-    String date_extablished;
-    String location;
+        // variable and declare them
+         String name;
+         String owner;
+         String regCode;
+
+        // Constroctors
+        public  Bank(String name, String owner, String regCode ){
+            this.name = name;
+            this.owner = owner;
+            this.regCode = regCode;
+        }
 
 
-    // methods means types of functionality that bank can perform
+        // methods  any functions that we can perform within a bank
 
-    // bank can have branches
-    public void branch(){
-    }
+        public void transfer(){
+            System.out.println(name + " I can make a transfer");
+        }
 
-    // banck can performa transaction
-    public void transaction(){
-
-    }
-
-    // you can have acustomer
-    public void customer(){
-
-    }
-
-    // you can open ana account
-    public void account(){
-
-    }
-
-    // this bank can loan money out to customers
-    public void loan(){
-
-    }
-
-
-
+        public void branch(){
+            System.out.println(name + " This bank can make transfer");
+        }
 
 
 
